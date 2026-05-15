@@ -1,0 +1,1 @@
+// Lightbox foto fullscreen

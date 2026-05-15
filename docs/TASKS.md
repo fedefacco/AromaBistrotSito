@@ -20,7 +20,7 @@
 
 | Data | Task lavorate | Note |
 |---|---|---|
-| | | |
+| 2026-05-15 | TASK-001 | Creata intera alberatura di cartelle e file placeholder |
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### TASK-001 — Creazione alberatura di cartelle del progetto
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Creare l'intera struttura di cartelle e file placeholder del progetto in `C:\Sviluppo\AromaBistrot`, esattamente come definita nel documento di analisi. Al termine di questa task, il progetto deve avere tutti i file e le cartelle al loro posto, pronti per essere popolati nelle task successive.
@@ -173,7 +173,7 @@ C:\Sviluppo\AromaBistrot
 **Criterio di completamento**
 
 La task è completata quando:
-- [ ] Tutte le cartelle esistono nel percorso `C:\Sviluppo\AromaBistrot`
-- [ ] Tutti i file esistono con il contenuto placeholder corretto
-- [ ] La struttura corrisponde esattamente a quella dell'analisi di progetto
-- [ ] I file in `/docs` esistono e sono vuoti
+- [x] Tutte le cartelle esistono nel percorso `C:\Sviluppo\AromaBistrot`
+- [x] Tutti i file esistono con il contenuto placeholder corretto
+- [x] La struttura corrisponde esattamente a quella dell'analisi di progetto
+- [x] I file in `/docs` esistono e sono vuoti
