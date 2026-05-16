@@ -10,6 +10,7 @@ const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 export default defineConfig({
   name: 'aroma-bistrot',
   title: 'Aroma Bistrot CMS',
+  basePath: '/studio',
 
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
