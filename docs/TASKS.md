@@ -24,6 +24,7 @@
 | 2026-05-16 | — | Aggiunte task TASK-002 → TASK-037 da analisi definitiva del progetto |
 | 2026-05-16 | TASK-002 | Inizializzazione Next.js 14.2 + dipendenze + dev server OK su localhost:3000 |
 | 2026-05-16 | TASK-003 | Scritto CLAUDE.md con contesto completo del progetto |
+| 2026-05-16 | TASK-004 | Design system: font next/font, variabili CSS, reset body, utility .font-serif e .tracking-label |
 
 ---
 
@@ -264,7 +265,7 @@ Scrivi `docs/CLAUDE.md` con le seguenti sezioni:
 
 ### TASK-004 — Tailwind config, font e variabili CSS globali
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Configurare il design system completo: palette colori in Tailwind, font serif e sans-serif caricati via `next/font`, variabili CSS custom in `globals.css`. Al termine questa task, tutta la base visiva del sito è pronta e riutilizzabile da ogni componente.
@@ -289,10 +290,10 @@ Configurare il design system completo: palette colori in Tailwind, font serif e 
    - Classe utility `.font-serif` che applica il font serif con le sue impostazioni tipografiche
 
 **Criterio di completamento**
-- [ ] `tailwind.config.ts` con colori e font configurati
-- [ ] Font caricati in `layout.tsx` via `next/font` senza chiamate esterne
-- [ ] `globals.css` con variabili e reset base
-- [ ] `npm run dev` compila senza errori TypeScript o Tailwind
+- [x] `tailwind.config.ts` con colori e font configurati (completato in TASK-002, invariato)
+- [x] Font caricati in `layout.tsx` via `next/font` senza chiamate esterne
+- [x] `globals.css` con variabili e reset base
+- [x] `npm run dev` compila senza errori TypeScript o Tailwind
 
 ---
 
