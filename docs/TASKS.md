@@ -38,6 +38,7 @@
 | 2026-05-16 | TASK-014 | Query GROQ (11 query named), TypeScript types completi, Footer async da Sanity, layout.tsx async con JSON-LD da dati reali, FloatingCTA riceve props da layout. |
 | 2026-05-16 | TASK-015 | HeroSection fullscreen: immagine Sanity + parallax Framer Motion (desktop only, rispetta prefers-reduced-motion), overlay, titolo clamp, CTA WhatsApp+menu, indicatore scroll. Split Server/Client Component. |
 | 2026-05-16 | TASK-016 | PresentationSection (citazione serif centrata, link /il-bistrot) e MenuPreviewSection (SectionLabel, lista piatti con prezzo+badge, immagine editoriale laterale su desktop). Visibilità condizionale da sezioniVisibili Sanity. |
+| 2026-05-16 | TASK-017 | EventCard (immagine, data, titolo, descrizione, CTA WhatsApp), EventsPreviewSection (max 2 prossimi eventi, return null se vuoti), GalleryTeaser (CSS Grid editoriale con pattern grande/piccolo), WineTeaser (sfondo muted, testo editoriale, prima bottiglia in evidenza). Aggiornato app/page.tsx con fetch parallelo. |
 
 ---
 
@@ -693,7 +694,7 @@ Implementare le due sezioni della homepage che presentano il locale e anticipano
 
 ### TASK-017 — EventsPreviewSection, GalleryTeaser, WineTeaser
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare le ultime tre sezioni della homepage: anteprima eventi, teaser galleria e richiamo vini.
@@ -726,10 +727,10 @@ Implementare le ultime tre sezioni della homepage: anteprima eventi, teaser gall
 - Immagine, titolo, data (formattata con `formatDate` da `lib/utils.ts`), descrizione breve, CTA
 
 **Criterio di completamento**
-- [ ] Tre sezioni implementate e visibili in homepage
-- [ ] EventsPreviewSection sparisce se non ci sono eventi futuri
-- [ ] EventCard riutilizzabile implementato
-- [ ] Dati letti da Sanity
+- [x] Tre sezioni implementate e visibili in homepage
+- [x] EventsPreviewSection sparisce se non ci sono eventi futuri
+- [x] EventCard riutilizzabile implementato
+- [x] Dati letti da Sanity
 
 ---
 
