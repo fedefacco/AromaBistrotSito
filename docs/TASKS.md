@@ -36,6 +36,7 @@
 | 2026-05-16 | TASK-012 | Schema Sanity menu: menuCategories (nome + ordine), menuItems (piatto completo con tag/allergeni/visibile), menuGallery (stagionale con attiva boolean). piattiInEvidenza ripristinato in homepageConfig. |
 | 2026-05-16 | TASK-013 | Schema Sanity: siteGallery (singleton galleria locale), events (con slug auto, block content, galleria foto), wineHighlights (con validation max 50 parole). |
 | 2026-05-16 | TASK-014 | Query GROQ (11 query named), TypeScript types completi, Footer async da Sanity, layout.tsx async con JSON-LD da dati reali, FloatingCTA riceve props da layout. |
+| 2026-05-16 | TASK-015 | HeroSection fullscreen: immagine Sanity + parallax Framer Motion (desktop only, rispetta prefers-reduced-motion), overlay, titolo clamp, CTA WhatsApp+menu, indicatore scroll. Split Server/Client Component. |
 
 ---
 
@@ -635,7 +636,7 @@ Scrivere tutte le query GROQ del progetto, definire i TypeScript types derivati 
 
 ### TASK-015 — HeroSection
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare la sezione hero fullscreen della homepage con immagine, testo, CTA e parallax leggero.
@@ -652,10 +653,10 @@ Implementa `sections/home/HeroSection.tsx` come Server Component (riceve i dati 
 - **Placeholder:** se nessuna immagine è disponibile in Sanity, usa un background gradient off-white → grigio scuro
 
 **Criterio di completamento**
-- [ ] Hero fullscreen con immagine e testo
-- [ ] Due CTA funzionanti
-- [ ] Parallax attivo su desktop, disabilitato su mobile
-- [ ] Responsive su tutti i breakpoint
+- [x] Hero fullscreen con immagine e testo
+- [x] Due CTA funzionanti
+- [x] Parallax attivo su desktop, disabilitato su mobile
+- [x] Responsive su tutti i breakpoint
 
 ---
 
