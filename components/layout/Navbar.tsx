@@ -34,7 +34,8 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  const isAtTop = scrollY < 80
+  // Trasparente solo sulla homepage quando si è in cima (dove c'è l'hero scuro)
+  const isAtTop = pathname === '/' && scrollY < 80
   const isHidden = direction === 'down' && !menuOpen
 
   return (
