@@ -26,6 +26,7 @@
 | 2026-05-16 | TASK-003 | Scritto CLAUDE.md con contesto completo del progetto |
 | 2026-05-16 | TASK-004 | Design system: font next/font, variabili CSS, reset body, utility .font-serif e .tracking-label |
 | 2026-05-16 | TASK-004 fix | Fix incompatibilità sucrase/tailwindcss su Node 20.10: pin tailwindcss@3.4.14, sucrase@3.34.0, overrides @jridgewell. Reinstallazione pulita. |
+| 2026-05-16 | TASK-005 | Componenti UI base: Button (primary/ghost/outline, sm/md/lg, href→a/button), Badge (5 varianti), Card (hover shadow), SectionLabel (withLine opzionale). cn() in lib/utils.ts. |
 
 ---
 
@@ -300,7 +301,7 @@ Configurare il design system completo: palette colori in Tailwind, font serif e 
 
 ### TASK-005 — Componenti UI base
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare i quattro componenti atomici riutilizzabili (`Button`, `Badge`, `Card`, `SectionLabel`) che compongono la base dell'interfaccia. Ogni componente deve essere tipizzato, accessibile e stilizzato con Tailwind.
@@ -331,9 +332,9 @@ Implementa i seguenti componenti in `components/ui/`:
 - Opzionale: linea decorativa laterale o sopra
 
 **Criterio di completamento**
-- [ ] I quattro componenti implementati e tipizzati in TypeScript
-- [ ] Nessun errore TypeScript
-- [ ] Visivamente coerenti con il design system definito in TASK-004
+- [x] I quattro componenti implementati e tipizzati in TypeScript
+- [x] Nessun errore TypeScript
+- [x] Visivamente coerenti con il design system definito in TASK-004
 
 ---
 
