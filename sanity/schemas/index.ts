@@ -1,4 +1,17 @@
 import type { SchemaTypeDefinition } from 'sanity'
 
-// Gli schema verranno aggiunti in TASK-011, TASK-012, TASK-013
-export const schemaTypes: SchemaTypeDefinition[] = []
+// TASK-011
+import settings from './settings'
+import about from './about'
+import homepageConfig from './homepageConfig'
+import pages from './pages'
+
+// TASK-012: menuCategories, menuItems, menuGallery
+// TASK-013: siteGallery, events, wineHighlights
+
+export const schemaTypes: SchemaTypeDefinition[] = [
+  settings,
+  about,
+  homepageConfig,
+  pages,
+]

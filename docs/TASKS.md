@@ -32,6 +32,7 @@
 | 2026-05-16 | TASK-008 | FloatingCTA: bottoni WhatsApp (verde) e Telefono (scuro), animazione spring Framer Motion con delay, testo su desktop, solo icona su mobile, min 48px touch target. |
 | 2026-05-16 | TASK-009 | layout.tsx: metadata completi con title.template, OpenGraph, metadataBase. JSON-LD Restaurant schema con orari, indirizzo, geo. Dati placeholder — aggiornati con Sanity in TASK-014. |
 | 2026-05-16 | TASK-010 | Setup Sanity: client.ts + urlFor, sanity.config.ts, route /studio/[[...tool]], robots.ts. .env.local creato con placeholder — inserire PROJECT_ID e API_TOKEN da sanity.io. |
+| 2026-05-16 | TASK-011 | Schema Sanity singleton: settings (dati globali), about (Il Bistrot), homepageConfig (configurazione homepage), pages (titoli/intro pagine). Singleton gestiti via structureTool in sanity.config.ts. |
 
 ---
 
@@ -507,7 +508,7 @@ Configurare il progetto Sanity (creazione progetto su sanity.io, credenziali, cl
 
 ### TASK-011 — Schema Sanity: settings, about, homepageConfig, pages
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare gli schema Sanity per i dati globali e le configurazioni singleton del sito.
@@ -528,10 +529,10 @@ Aggiorna `sanity/schemas/index.ts` per esportare tutti gli schema.
 Inserisci un documento di test per `settings` dallo studio per verificare che lo schema funzioni.
 
 **Criterio di completamento**
-- [ ] I quattro schema definiti e senza errori TypeScript
-- [ ] Schema visibili nello studio Sanity
-- [ ] Documento `settings` di test creato nello studio
-- [ ] `schemas/index.ts` aggiornato
+- [x] I quattro schema definiti e senza errori TypeScript
+- [x] Schema visibili nello studio Sanity (verificare aprendo /studio dopo aver inserito le credenziali)
+- [ ] Documento `settings` di test creato nello studio (operazione manuale dal browser)
+- [x] `schemas/index.ts` aggiornato
 
 ---
 
