@@ -25,6 +25,7 @@
 | 2026-05-16 | TASK-002 | Inizializzazione Next.js 14.2 + dipendenze + dev server OK su localhost:3000 |
 | 2026-05-16 | TASK-003 | Scritto CLAUDE.md con contesto completo del progetto |
 | 2026-05-16 | TASK-004 | Design system: font next/font, variabili CSS, reset body, utility .font-serif e .tracking-label |
+| 2026-05-16 | TASK-004 fix | Fix incompatibilità sucrase/tailwindcss su Node 20.10: pin tailwindcss@3.4.14, sucrase@3.34.0, overrides @jridgewell. Reinstallazione pulita. |
 
 ---
 
