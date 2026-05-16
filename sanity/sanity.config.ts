@@ -36,7 +36,16 @@ export default defineConfig({
             S.listItem()
               .title('Pagine')
               .child(S.documentTypeList('pages').title('Pagine')),
-            // TASK-012: Menu — Categorie, Piatti, Galleria
+            S.divider(),
+            S.listItem()
+              .title('Menu — Categorie')
+              .child(S.documentTypeList('menuCategories').title('Categorie menu')),
+            S.listItem()
+              .title('Menu — Piatti')
+              .child(S.documentTypeList('menuItems').title('Piatti')),
+            S.listItem()
+              .title('Menu — Galleria foto')
+              .child(S.documentTypeList('menuGallery').title('Gallerie menu')),
             // TASK-013: Galleria locale, Eventi, Vini in evidenza
           ]),
     }),

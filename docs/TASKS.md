@@ -33,6 +33,7 @@
 | 2026-05-16 | TASK-009 | layout.tsx: metadata completi con title.template, OpenGraph, metadataBase. JSON-LD Restaurant schema con orari, indirizzo, geo. Dati placeholder — aggiornati con Sanity in TASK-014. |
 | 2026-05-16 | TASK-010 | Setup Sanity: client.ts + urlFor, sanity.config.ts, route /studio/[[...tool]], robots.ts. .env.local creato con placeholder — inserire PROJECT_ID e API_TOKEN da sanity.io. |
 | 2026-05-16 | TASK-011 | Schema Sanity singleton: settings (dati globali), about (Il Bistrot), homepageConfig (configurazione homepage), pages (titoli/intro pagine). Singleton gestiti via structureTool in sanity.config.ts. |
+| 2026-05-16 | TASK-012 | Schema Sanity menu: menuCategories (nome + ordine), menuItems (piatto completo con tag/allergeni/visibile), menuGallery (stagionale con attiva boolean). piattiInEvidenza ripristinato in homepageConfig. |
 
 ---
 
@@ -538,7 +539,7 @@ Inserisci un documento di test per `settings` dallo studio per verificare che lo
 
 ### TASK-012 — Schema Sanity: menu (categorie, piatti, galleria)
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare gli schema per la gestione completa del menu: categorie, piatti singoli e galleria fotografica stagionale.
@@ -556,9 +557,9 @@ Implementa in `sanity/schemas/`:
 Inserisci dati di test nello studio: 4 categorie (Antipasti, Primi, Secondi, Dessert) e almeno 2 piatti per categoria come placeholder.
 
 **Criterio di completamento**
-- [ ] I tre schema definiti senza errori
-- [ ] Dati di test inseriti nello studio
-- [ ] Ordinamento categorie e piatti funzionante nello studio
+- [x] I tre schema definiti senza errori
+- [ ] Dati di test inseriti nello studio (operazione manuale — vedi istruzioni sotto)
+- [x] Ordinamento categorie e piatti funzionante nello studio
 
 ---
 
