@@ -468,7 +468,7 @@ Completa `app/layout.tsx`:
 
 ### TASK-010 — Setup Sanity + configurazione studio
 
-**Stato:** ✅ Completata (parziale — credenziali da inserire in .env.local)
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Configurare il progetto Sanity (creazione progetto su sanity.io, credenziali, client configurato) e lo studio Sanity accessibile localmente.
@@ -498,7 +498,7 @@ Configurare il progetto Sanity (creazione progetto su sanity.io, credenziali, cl
 6. Aggiorna `app/robots.ts` per escludere `/studio/*` dall'indicizzazione
 
 **Criterio di completamento**
-- [ ] `.env.local` popolato con credenziali reali (da fare manualmente)
+- [x] `.env.local` popolato con credenziali reali
 - [x] Client Sanity configurato e funzionante
 - [x] Studio accessibile su `http://localhost:3000/studio` (dopo aver inserito le credenziali)
 - [x] `/studio` escluso da robots.txt
