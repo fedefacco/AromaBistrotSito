@@ -31,6 +31,7 @@
 | 2026-05-16 | TASK-007 | Footer: tre colonne (recapiti, orari, link+social), background #F0EDE6, link tel/wa/email/instagram, copyright. Dati placeholder — collegamento Sanity in TASK-014. |
 | 2026-05-16 | TASK-008 | FloatingCTA: bottoni WhatsApp (verde) e Telefono (scuro), animazione spring Framer Motion con delay, testo su desktop, solo icona su mobile, min 48px touch target. |
 | 2026-05-16 | TASK-009 | layout.tsx: metadata completi con title.template, OpenGraph, metadataBase. JSON-LD Restaurant schema con orari, indirizzo, geo. Dati placeholder — aggiornati con Sanity in TASK-014. |
+| 2026-05-16 | TASK-010 | Setup Sanity: client.ts + urlFor, sanity.config.ts, route /studio/[[...tool]], robots.ts. .env.local creato con placeholder — inserire PROJECT_ID e API_TOKEN da sanity.io. |
 
 ---
 
@@ -467,7 +468,7 @@ Completa `app/layout.tsx`:
 
 ### TASK-010 — Setup Sanity + configurazione studio
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata (parziale — credenziali da inserire in .env.local)
 
 **Obiettivo**
 Configurare il progetto Sanity (creazione progetto su sanity.io, credenziali, client configurato) e lo studio Sanity accessibile localmente.
@@ -497,10 +498,10 @@ Configurare il progetto Sanity (creazione progetto su sanity.io, credenziali, cl
 6. Aggiorna `app/robots.ts` per escludere `/studio/*` dall'indicizzazione
 
 **Criterio di completamento**
-- [ ] `.env.local` popolato con credenziali reali
-- [ ] Client Sanity configurato e funzionante
-- [ ] Studio accessibile su `http://localhost:3000/studio`
-- [ ] `/studio` escluso da robots.txt
+- [ ] `.env.local` popolato con credenziali reali (da fare manualmente)
+- [x] Client Sanity configurato e funzionante
+- [x] Studio accessibile su `http://localhost:3000/studio` (dopo aver inserito le credenziali)
+- [x] `/studio` escluso da robots.txt
 
 ---
 
