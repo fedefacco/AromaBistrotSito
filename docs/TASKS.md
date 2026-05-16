@@ -23,6 +23,7 @@
 | 2026-05-15 | TASK-001 | Creata intera alberatura di cartelle e file placeholder |
 | 2026-05-16 | — | Aggiunte task TASK-002 → TASK-037 da analisi definitiva del progetto |
 | 2026-05-16 | TASK-002 | Inizializzazione Next.js 14.2 + dipendenze + dev server OK su localhost:3000 |
+| 2026-05-16 | TASK-003 | Scritto CLAUDE.md con contesto completo del progetto |
 
 ---
 
@@ -232,7 +233,7 @@ Dalla root del progetto (`C:\Sviluppo\AromaBistrot\AromaBistrotSito`):
 
 ### TASK-003 — Scrittura CLAUDE.md
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Popolare il file `docs/CLAUDE.md` con il contesto completo del progetto affinché Claude Code abbia sempre tutte le informazioni necessarie senza doverle richiedere.
@@ -251,9 +252,9 @@ Scrivi `docs/CLAUDE.md` con le seguenti sezioni:
 - **Regole operative:** una task alla volta, commit frequenti, TASKS.md aggiornato ad ogni sessione
 
 **Criterio di completamento**
-- [ ] `docs/CLAUDE.md` scritto e completo
-- [ ] Tutte le sezioni elencate presenti
-- [ ] File leggibile e conciso (non più di 200 righe)
+- [x] `docs/CLAUDE.md` scritto e completo
+- [x] Tutte le sezioni elencate presenti
+- [x] File leggibile e conciso (non più di 200 righe)
 
 ---
 
