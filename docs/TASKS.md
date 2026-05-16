@@ -531,7 +531,7 @@ Inserisci un documento di test per `settings` dallo studio per verificare che lo
 **Criterio di completamento**
 - [x] I quattro schema definiti e senza errori TypeScript
 - [x] Schema visibili nello studio Sanity (verificare aprendo /studio dopo aver inserito le credenziali)
-- [ ] Documento `settings` di test creato nello studio (operazione manuale dal browser)
+- [x] Documento `settings` di test creato nello studio
 - [x] `schemas/index.ts` aggiornato
 
 ---
