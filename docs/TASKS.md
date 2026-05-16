@@ -27,6 +27,7 @@
 | 2026-05-16 | TASK-004 | Design system: font next/font, variabili CSS, reset body, utility .font-serif e .tracking-label |
 | 2026-05-16 | TASK-004 fix | Fix incompatibilità sucrase/tailwindcss su Node 20.10: pin tailwindcss@3.4.14, sucrase@3.34.0, overrides @jridgewell. Reinstallazione pulita. |
 | 2026-05-16 | TASK-005 | Componenti UI base: Button (primary/ghost/outline, sm/md/lg, href→a/button), Badge (5 varianti), Card (hover shadow), SectionLabel (withLine opzionale). cn() in lib/utils.ts. |
+| 2026-05-16 | TASK-006 | Navbar: useScrollDirection hook, navbar sticky scroll-aware, menu mobile overlay fullscreen, link attivo con underline, doppio stile hero/resto. Montata in layout.tsx. |
 
 ---
 
@@ -344,7 +345,7 @@ Implementa i seguenti componenti in `components/ui/`:
 
 ### TASK-006 — Navbar
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare la navbar sticky con comportamento scroll-aware, menu mobile a overlay e cambio stile quando sovrasta l'hero.
@@ -366,11 +367,11 @@ Implementa `components/layout/Navbar.tsx` e il hook `hooks/useScrollDirection.ts
 - **Link attivo:** underline o punto decorativo sul link della pagina corrente (usa `usePathname`)
 
 **Criterio di completamento**
-- [ ] Navbar visibile e funzionante su desktop e mobile
-- [ ] Menu mobile apre e chiude correttamente
-- [ ] Scroll behavior funziona (si nasconde/mostra)
-- [ ] Cambio stile su hero funziona
-- [ ] Link attivo evidenziato correttamente
+- [x] Navbar visibile e funzionante su desktop e mobile
+- [x] Menu mobile apre e chiude correttamente
+- [x] Scroll behavior funziona (si nasconde/mostra)
+- [x] Cambio stile su hero funziona
+- [x] Link attivo evidenziato correttamente
 
 ---
 
