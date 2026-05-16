@@ -3,13 +3,14 @@ import { structureTool } from 'sanity/structure'
 import type { StructureBuilder } from 'sanity/structure'
 import { schemaTypes } from './schemas'
 
-const singletonTypes = new Set(['settings', 'about', 'homepageConfig'])
+const singletonTypes = new Set(['settings', 'about', 'homepageConfig', 'siteGallery'])
 
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 
 export default defineConfig({
   name: 'aroma-bistrot',
   title: 'Aroma Bistrot CMS',
+  basePath: '/studio',
 
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
@@ -46,7 +47,17 @@ export default defineConfig({
             S.listItem()
               .title('Menu — Galleria foto')
               .child(S.documentTypeList('menuGallery').title('Gallerie menu')),
-            // TASK-013: Galleria locale, Eventi, Vini in evidenza
+            S.divider(),
+            S.listItem()
+              .title('Galleria locale')
+              .id('siteGallery')
+              .child(S.document().schemaType('siteGallery').documentId('siteGallery')),
+            S.listItem()
+              .title('Eventi')
+              .child(S.documentTypeList('events').title('Eventi')),
+            S.listItem()
+              .title('Vini in evidenza')
+              .child(S.documentTypeList('wineHighlights').title('Vini in evidenza')),
           ]),
     }),
   ],

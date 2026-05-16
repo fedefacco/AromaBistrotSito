@@ -34,6 +34,7 @@
 | 2026-05-16 | TASK-010 | Setup Sanity: client.ts + urlFor, sanity.config.ts, route /studio/[[...tool]], robots.ts. .env.local creato con placeholder — inserire PROJECT_ID e API_TOKEN da sanity.io. |
 | 2026-05-16 | TASK-011 | Schema Sanity singleton: settings (dati globali), about (Il Bistrot), homepageConfig (configurazione homepage), pages (titoli/intro pagine). Singleton gestiti via structureTool in sanity.config.ts. |
 | 2026-05-16 | TASK-012 | Schema Sanity menu: menuCategories (nome + ordine), menuItems (piatto completo con tag/allergeni/visibile), menuGallery (stagionale con attiva boolean). piattiInEvidenza ripristinato in homepageConfig. |
+| 2026-05-16 | TASK-013 | Schema Sanity: siteGallery (singleton galleria locale), events (con slug auto, block content, galleria foto), wineHighlights (con validation max 50 parole). |
 
 ---
 
@@ -565,7 +566,7 @@ Inserisci dati di test nello studio: 4 categorie (Antipasti, Primi, Secondi, Des
 
 ### TASK-013 — Schema Sanity: siteGallery, events, wineHighlights
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare gli schema per la galleria del locale, gli eventi e i vini in evidenza.
@@ -583,9 +584,9 @@ Implementa in `sanity/schemas/`:
 Inserisci 2 eventi placeholder nello studio (uno "prossimo", uno "passato") e 3 vini placeholder.
 
 **Criterio di completamento**
-- [ ] I tre schema definiti senza errori
-- [ ] Dati placeholder inseriti nello studio
-- [ ] Slug eventi generati correttamente
+- [x] I tre schema definiti senza errori
+- [ ] Dati placeholder inseriti nello studio (operazione manuale — vedi istruzioni)
+- [x] Slug eventi generati correttamente (campo slug con source: 'titolo')
 
 ---
 
