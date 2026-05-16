@@ -35,6 +35,7 @@
 | 2026-05-16 | TASK-011 | Schema Sanity singleton: settings (dati globali), about (Il Bistrot), homepageConfig (configurazione homepage), pages (titoli/intro pagine). Singleton gestiti via structureTool in sanity.config.ts. |
 | 2026-05-16 | TASK-012 | Schema Sanity menu: menuCategories (nome + ordine), menuItems (piatto completo con tag/allergeni/visibile), menuGallery (stagionale con attiva boolean). piattiInEvidenza ripristinato in homepageConfig. |
 | 2026-05-16 | TASK-013 | Schema Sanity: siteGallery (singleton galleria locale), events (con slug auto, block content, galleria foto), wineHighlights (con validation max 50 parole). |
+| 2026-05-16 | TASK-014 | Query GROQ (11 query named), TypeScript types completi, Footer async da Sanity, layout.tsx async con JSON-LD da dati reali, FloatingCTA riceve props da layout. |
 
 ---
 
@@ -592,7 +593,7 @@ Inserisci 2 eventi placeholder nello studio (uno "prossimo", uno "passato") e 3 
 
 ### TASK-014 — Query GROQ, TypeScript types e collegamento dati globali
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Scrivere tutte le query GROQ del progetto, definire i TypeScript types derivati dagli schema, e collegare i dati reali di Sanity al Footer, FloatingCTA e JSON-LD (che per ora usano dati hardcoded).
@@ -620,11 +621,11 @@ Scrivere tutte le query GROQ del progetto, definire i TypeScript types derivati 
    - `layout.tsx` — fetch `settingsQuery` e passa i dati a FloatingCTA, aggiorna JSON-LD con dati reali
 
 **Criterio di completamento**
-- [ ] Tutte le query GROQ scritte e testate (verificare che restituiscano dati corretti)
-- [ ] Types TypeScript definiti per tutte le entity
-- [ ] Footer mostra dati reali da Sanity
-- [ ] FloatingCTA usa numeri reali da Sanity
-- [ ] JSON-LD usa dati reali da Sanity
+- [x] Tutte le query GROQ scritte e testate (verificare che restituiscano dati corretti)
+- [x] Types TypeScript definiti per tutte le entity
+- [x] Footer mostra dati reali da Sanity
+- [x] FloatingCTA usa numeri reali da Sanity
+- [x] JSON-LD usa dati reali da Sanity
 
 ---
 

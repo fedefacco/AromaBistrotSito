@@ -4,6 +4,9 @@ import '@/styles/globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import FloatingCTA from '@/components/layout/FloatingCTA'
+import { client } from '@/sanity/lib/client'
+import { settingsQuery } from '@/sanity/lib/queries'
+import type { Settings } from '@/types'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -42,64 +45,59 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://aromabistrot.it'),
 }
 
-const localBusinessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Restaurant',
-  name: 'Aroma Bistrot',
-  url: 'https://aromabistrot.it',
-  telephone: '+390373000000',
-  email: 'info@aromabistrot.it',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Via Roma 12',
-    addressLocality: 'Offanengo',
-    addressRegion: 'CR',
-    postalCode: '26010',
-    addressCountry: 'IT',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 45.3667,
-    longitude: 9.7833,
-  },
-  servesCuisine: 'Cucina italiana contemporanea',
-  priceRange: '€€',
-  image: 'https://aromabistrot.it/images/og-default.jpg',
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday'],
-      opens: '19:00',
-      closes: '22:30',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Friday'],
-      opens: '19:00',
-      closes: '23:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday'],
-      opens: '12:30',
-      closes: '14:30',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday'],
-      opens: '19:00',
-      closes: '23:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Sunday'],
-      opens: '12:30',
-      closes: '14:30',
-    },
-  ],
+const GIORNI_EN: Record<string, string> = {
+  lunedi:    'Monday',
+  martedi:   'Tuesday',
+  mercoledi: 'Wednesday',
+  giovedi:   'Thursday',
+  venerdi:   'Friday',
+  sabato:    'Saturday',
+  domenica:  'Sunday',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const settings: Settings | null = await client.fetch(settingsQuery, {}, { next: { revalidate: 3600 } })
+
+  const telefono  = settings?.telefono  ?? ''
+  const whatsapp  = settings?.whatsapp  ?? ''
+  const nome      = settings?.nomeLocale ?? 'Aroma Bistrot'
+  const indirizzo = settings?.indirizzoStrada ?? ''
+  const citta     = settings?.citta ?? ''
+  const email     = settings?.email ?? ''
+
+  // Costruisce openingHoursSpecification dagli orari Sanity
+  const openingHours = (settings?.orariSettimanali ?? [])
+    .filter((o) => !o.chiuso && o.orario)
+    .flatMap((o) => {
+      const dayOfWeek = GIORNI_EN[o.giorno]
+      if (!dayOfWeek || !o.orario) return []
+      // Supporta orari doppi separati da "·" es. "12:30 – 14:30 · 19:00 – 23:00"
+      return o.orario.split('·').map((slot) => {
+        const [opens, closes] = slot.trim().split('–').map((t) => t.trim())
+        return { '@type': 'OpeningHoursSpecification', dayOfWeek, opens, closes }
+      })
+    })
+
+  const localBusinessJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Restaurant',
+    name: nome,
+    url: 'https://aromabistrot.it',
+    telephone: telefono,
+    email: email || undefined,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: indirizzo,
+      addressLocality: citta.split('(')[0]?.trim() ?? citta,
+      addressRegion: citta.match(/\(([^)]+)\)/)?.[1] ?? '',
+      addressCountry: 'IT',
+    },
+    servesCuisine: 'Cucina italiana contemporanea',
+    priceRange: '€€',
+    image: 'https://aromabistrot.it/images/og-default.jpg',
+    ...(openingHours.length > 0 && { openingHoursSpecification: openingHours }),
+  }
+
   return (
     <html lang="it" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="bg-background text-foreground font-sans antialiased">
@@ -110,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
-        <FloatingCTA />
+        <FloatingCTA telefono={telefono} whatsapp={whatsapp} />
       </body>
     </html>
   )
