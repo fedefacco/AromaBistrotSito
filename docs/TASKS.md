@@ -28,6 +28,7 @@
 | 2026-05-16 | TASK-004 fix | Fix incompatibilità sucrase/tailwindcss su Node 20.10: pin tailwindcss@3.4.14, sucrase@3.34.0, overrides @jridgewell. Reinstallazione pulita. |
 | 2026-05-16 | TASK-005 | Componenti UI base: Button (primary/ghost/outline, sm/md/lg, href→a/button), Badge (5 varianti), Card (hover shadow), SectionLabel (withLine opzionale). cn() in lib/utils.ts. |
 | 2026-05-16 | TASK-006 | Navbar: useScrollDirection hook, navbar sticky scroll-aware, menu mobile overlay fullscreen, link attivo con underline, doppio stile hero/resto. Montata in layout.tsx. |
+| 2026-05-16 | TASK-007 | Footer: tre colonne (recapiti, orari, link+social), background #F0EDE6, link tel/wa/email/instagram, copyright. Dati placeholder — collegamento Sanity in TASK-014. |
 
 ---
 
@@ -377,7 +378,7 @@ Implementa `components/layout/Navbar.tsx` e il hook `hooks/useScrollDirection.ts
 
 ### TASK-007 — Footer
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare il footer con tutti i dati di contatto, orari e link social. I dati vengono letti dalla collection `settings` di Sanity (in questa fase usa dati statici placeholder, verranno collegati al CMS in FASE 3).
@@ -395,10 +396,10 @@ Implementa `components/layout/Footer.tsx`:
 - **Copyright:** "© 2025 Aroma Bistrot · tutti i diritti riservati"
 
 **Criterio di completamento**
-- [ ] Footer visibile con struttura a tre colonne
-- [ ] Link telefono e WhatsApp funzionanti (link `tel:` e `https://wa.me/`)
-- [ ] Responsive: stack verticale su mobile
-- [ ] Integrato in `app/layout.tsx`
+- [x] Footer visibile con struttura a tre colonne
+- [x] Link telefono e WhatsApp funzionanti (link `tel:` e `https://wa.me/`)
+- [x] Responsive: stack verticale su mobile
+- [x] Integrato in `app/layout.tsx`
 
 ---
 
