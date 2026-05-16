@@ -37,6 +37,7 @@
 | 2026-05-16 | TASK-013 | Schema Sanity: siteGallery (singleton galleria locale), events (con slug auto, block content, galleria foto), wineHighlights (con validation max 50 parole). |
 | 2026-05-16 | TASK-014 | Query GROQ (11 query named), TypeScript types completi, Footer async da Sanity, layout.tsx async con JSON-LD da dati reali, FloatingCTA riceve props da layout. |
 | 2026-05-16 | TASK-015 | HeroSection fullscreen: immagine Sanity + parallax Framer Motion (desktop only, rispetta prefers-reduced-motion), overlay, titolo clamp, CTA WhatsApp+menu, indicatore scroll. Split Server/Client Component. |
+| 2026-05-16 | TASK-016 | PresentationSection (citazione serif centrata, link /il-bistrot) e MenuPreviewSection (SectionLabel, lista piatti con prezzo+badge, immagine editoriale laterale su desktop). Visibilità condizionale da sezioniVisibili Sanity. |
 
 ---
 
@@ -662,7 +663,7 @@ Implementa `sections/home/HeroSection.tsx` come Server Component (riceve i dati 
 
 ### TASK-016 — PresentationSection e MenuPreviewSection
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare le due sezioni della homepage che presentano il locale e anticipano il menu stagionale.
@@ -684,9 +685,9 @@ Implementare le due sezioni della homepage che presentano il locale e anticipano
 - Visibile solo se `sezioniVisibili.menuPreview === true`
 
 **Criterio di completamento**
-- [ ] Entrambe le sezioni implementate e visibili in homepage
-- [ ] Dati letti da Sanity
-- [ ] Visibilità condizionale funzionante
+- [x] Entrambe le sezioni implementate e visibili in homepage
+- [x] Dati letti da Sanity
+- [x] Visibilità condizionale funzionante
 
 ---
 
