@@ -34,19 +34,8 @@ export default defineType({
       rows: 4,
       description: 'Paragrafo introduttivo del locale (3-4 righe) — visibile nella sezione sotto l\'hero',
     }),
-    defineField({
-      name: 'piattiInEvidenza',
-      title: 'Piatti in evidenza',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'reference',
-          to: [{ type: 'menuItems' }],
-        }),
-      ],
-      description: 'Massimo 4 piatti mostrati nella sezione anteprima menu in homepage',
-      validation: (Rule) => Rule.max(4).warning('Seleziona al massimo 4 piatti in evidenza'),
-    }),
+    // piattiInEvidenza — aggiunto in TASK-012 quando menuItems sarà registrato
+    // defineField({ name: 'piattiInEvidenza', type: 'array', of: [{ type: 'reference', to: [{ type: 'menuItems' }] }] })
     defineField({
       name: 'testoVini',
       title: 'Testo sezione vini',
