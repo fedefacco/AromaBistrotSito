@@ -30,6 +30,7 @@
 | 2026-05-16 | TASK-006 | Navbar: useScrollDirection hook, navbar sticky scroll-aware, menu mobile overlay fullscreen, link attivo con underline, doppio stile hero/resto. Montata in layout.tsx. |
 | 2026-05-16 | TASK-007 | Footer: tre colonne (recapiti, orari, link+social), background #F0EDE6, link tel/wa/email/instagram, copyright. Dati placeholder — collegamento Sanity in TASK-014. |
 | 2026-05-16 | TASK-008 | FloatingCTA: bottoni WhatsApp (verde) e Telefono (scuro), animazione spring Framer Motion con delay, testo su desktop, solo icona su mobile, min 48px touch target. |
+| 2026-05-16 | TASK-009 | layout.tsx: metadata completi con title.template, OpenGraph, metadataBase. JSON-LD Restaurant schema con orari, indirizzo, geo. Dati placeholder — aggiornati con Sanity in TASK-014. |
 
 ---
 
@@ -432,7 +433,7 @@ Implementa `components/layout/FloatingCTA.tsx` come componente `"use client"`:
 
 ### TASK-009 — layout.tsx globale
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Completare il layout globale dell'applicazione integrando tutti i componenti strutturali, i font, i metadata base e il JSON-LD LocalBusiness.
@@ -453,10 +454,10 @@ Completa `app/layout.tsx`:
   - I dati verranno collegati a Sanity in TASK-014
 
 **Criterio di completamento**
-- [ ] Navbar, Footer, FloatingCTA montati nel layout
-- [ ] Metadata base esportati correttamente
-- [ ] JSON-LD presente nell'HTML generato
-- [ ] `npm run dev` senza errori
+- [x] Navbar, Footer, FloatingCTA montati nel layout
+- [x] Metadata base esportati correttamente
+- [x] JSON-LD presente nell'HTML generato
+- [x] `npm run dev` senza errori
 
 ---
 
