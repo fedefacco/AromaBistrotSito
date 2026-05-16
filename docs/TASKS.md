@@ -29,6 +29,7 @@
 | 2026-05-16 | TASK-005 | Componenti UI base: Button (primary/ghost/outline, sm/md/lg, href→a/button), Badge (5 varianti), Card (hover shadow), SectionLabel (withLine opzionale). cn() in lib/utils.ts. |
 | 2026-05-16 | TASK-006 | Navbar: useScrollDirection hook, navbar sticky scroll-aware, menu mobile overlay fullscreen, link attivo con underline, doppio stile hero/resto. Montata in layout.tsx. |
 | 2026-05-16 | TASK-007 | Footer: tre colonne (recapiti, orari, link+social), background #F0EDE6, link tel/wa/email/instagram, copyright. Dati placeholder — collegamento Sanity in TASK-014. |
+| 2026-05-16 | TASK-008 | FloatingCTA: bottoni WhatsApp (verde) e Telefono (scuro), animazione spring Framer Motion con delay, testo su desktop, solo icona su mobile, min 48px touch target. |
 
 ---
 
@@ -405,7 +406,7 @@ Implementa `components/layout/Footer.tsx`:
 
 ### TASK-008 — FloatingCTA
 
-**Stato:** 🔲 Da fare
+**Stato:** ✅ Completata
 
 **Obiettivo**
 Implementare i due bottoni fissi WhatsApp + Telefono con animazione di ingresso Framer Motion.
@@ -422,10 +423,10 @@ Implementa `components/layout/FloatingCTA.tsx` come componente `"use client"`:
 - **Touch target:** su mobile i bottoni hanno almeno 48x48px per essere facilmente toccabili
 
 **Criterio di completamento**
-- [ ] FloatingCTA visibile su tutte le pagine
-- [ ] Animazione di ingresso funzionante
-- [ ] Dimensioni corrette su mobile e desktop
-- [ ] Integrato in `app/layout.tsx`
+- [x] FloatingCTA visibile su tutte le pagine
+- [x] Animazione di ingresso funzionante
+- [x] Dimensioni corrette su mobile e desktop
+- [x] Integrato in `app/layout.tsx`
 
 ---
 

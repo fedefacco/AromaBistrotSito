@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import FloatingCTA from '@/components/layout/FloatingCTA'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
+        <FloatingCTA />
       </body>
     </html>
   )
