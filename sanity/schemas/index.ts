@@ -11,7 +11,10 @@ import menuCategories from './menuCategories'
 import menuItems from './menuItems'
 import menuGallery from './menuGallery'
 
-// TASK-013: siteGallery, events, wineHighlights
+// TASK-013
+import siteGallery from './siteGallery'
+import events from './events'
+import wineHighlights from './wineHighlights'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   settings,
@@ -21,4 +24,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   menuCategories,
   menuItems,
   menuGallery,
+  siteGallery,
+  events,
+  wineHighlights,
 ]
